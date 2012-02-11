@@ -1,0 +1,133 @@
+/* @override 
+	http://www.appsaloon.be/testsite/as_mediabox/as_mediabox.css */
+
+/* Basic styles */
+body{
+	margin: 0;padding: 0;
+}
+#as_blackPage{
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	z-index: 2000;
+	top: 0;
+	left: 0;
+}
+.as_mediaContainer{
+	position: fixed;
+	z-index: 2002;
+}
+#as_mediaBox{
+	position: relative;
+}
+.as_loading{
+	position: fixed;
+	z-index: 2001;
+	width: 100%;
+}
+
+
+/* Theming */
+
+#as_blackPage{
+	background-color: rgba(0, 0, 0, 0.45);
+}
+.as_mediaContainer{
+	padding: 10px;
+	background-color: #414141;
+	border-radius: 20px;
+	-moz-box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.44);
+	-webkit-box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.44);
+	box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.44);
+}
+.as_mediaBorder{
+	border-radius: 10px;
+	padding: 20px 20px 40px 20px;
+	background-color: #2c2c2c;
+}
+#as_mediaBox{
+	-moz-box-shadow: 3px 3px 4px #202020;
+	-webkit-box-shadow: 3px 3px 4px #202020;
+	box-shadow: 3px 3px 4px #202020;
+	border-radius: 5px;
+}
+
+@import url(http://fonts.googleapis.com/css?family=Nunito:700);
+.close{
+	position: absolute;
+	right: 20;
+	bottom:17;
+	width: 70px;
+	float: left;
+	color: #414141;
+	border: 3px solid #676767;
+	border-radius: 8px;
+	padding: 2px 2px 1px 10px;
+	margin: 0 10px;
+	-moz-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.14);
+	-webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.14);
+	box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.14);
+	cursor: pointer;
+	font: 700 14px 'Nunito', sans-serif;
+	background-color: #ffffff;
+}
+.close:hover{
+	background-color: rgb(222, 222, 222);
+	-moz-box-shadow: -3px -2px 4px rgba(0, 0, 0, 0.12);
+	-webkit-box-shadow: -3px -2px 4px rgba(0, 0, 0, 0.12);
+	box-shadow: -3px -2px 4px rgba(0, 0, 0, 0.12);
+	text-shadow: -1px -1px 0 #ffffff;
+}
+.close div#x{
+	position: absolute;
+	left: 60;
+	top: 2;
+}
+
+/* thx to http://www.alessioatzeni.com/blog/css3-loading-animation-loop/ */
+.as_ball {
+	background-color: rgba(0,0,0,0);
+	border: 8px solid rgba(255, 255, 255, 0.9);
+	opacity:.9;
+	border-top:8px solid rgba(0,0,0,0);
+	border-bottom:8px solid rgba(0,0,0,0);
+	border-radius:80px;
+	box-shadow: 0 0 35px #ffffff;
+	width:80px;
+	height:80px;
+	margin:0 auto;
+	-moz-animation:spin .8s infinite linear;
+	-webkit-animation:spin .8s infinite linear;
+}
+.as_ball1 {
+	background-color: rgba(0,0,0,0);
+	border: 8px solid rgba(255, 254, 254, 0.9);
+	opacity:.9;
+	border-top:8px solid rgba(0,0,0,0);
+	border-bottom:8px solid rgba(0,0,0,0);
+	border-radius:80px;
+	box-shadow: 0 0 15px #ffffff; 
+	width:50px;
+	height:50px;
+	margin:0 auto;
+	position:relative;
+	top:-82px;
+	-moz-animation:spinoff 1.3s infinite linear;
+	-webkit-animation:spinoff 1.3s infinite linear;
+}
+@-moz-keyframes spin {
+	0% { -moz-transform:rotate(0deg); }
+	100% { -moz-transform:rotate(360deg); }
+}
+@-moz-keyframes spinoff {
+	0% { -moz-transform:rotate(0deg); }
+	100% { -moz-transform:rotate(-360deg); }
+}
+@-webkit-keyframes spin {
+	0% { -webkit-transform:rotate(0deg); }
+	100% { -webkit-transform:rotate(360deg); }
+}
+@-webkit-keyframes spinoff {
+	0% { -webkit-transform:rotate(0deg); }
+	100% { -webkit-transform:rotate(-360deg); }
+}
